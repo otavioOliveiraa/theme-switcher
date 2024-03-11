@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--dark);
+}
+
+/* Mode Light */
+
+.light {
+  background: var(--light);
+}
+
+.toRight {
+  animation: toRight 0.25s ease-in-out forwards;
+}
+
+.toLeft {
+  animation: toLeft 0.25s ease-in-out forwards;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+
+  --dark: #292c35;
+  --light: #f1f1f1;
+  --label: #111;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+section,
+span {
+  border-radius: 999rem;
+}
+
+section {
+  padding: 0.8rem 1.2rem;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  background: var(--label);
+}
+
+.ph-bold,
+button {
+  display: inline;
+  color: #f1c40f;
+  font-size: 7.8rem;
+  object-fit: contain;
+
+  background: transparent;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+span {
+  position: absolute;
+  /* left: 1.2rem; */
+
+  display: inline;
+  width: 7.8rem;
+  height: 7.8rem;
+  background: var(--light);
+}
+
+/* Animation */
+@keyframes toRight {
+  0% {
+    left: 1.2rem;
+  }
+
+  100% {
+    left: 58%;
+  }
+}
+
+@keyframes toLeft {
+  0% {
+    right: 1.2rem;
+  }
+
+  100% {
+    right: 58%;
+  }
+}
